@@ -8,8 +8,22 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+
+    EditText userName;
+    EditText phoneNumber;
+
+    //Login user
+    public void logInUser(View view){
+
+        userName=(EditText) findViewById(R.id.username);
+        phoneNumber=(EditText) findViewById(R.id.phonenumber);
+
+
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -48,5 +48,6 @@
         android:layout_centerHorizontal="true"
         android:background="#080000"
         android:layout_marginTop="10dp"
-        android:textColor="#fbf704" />
+        android:textColor="#fbf704"
+        android:onClick="logInUser" />
 </RelativeLayout>
