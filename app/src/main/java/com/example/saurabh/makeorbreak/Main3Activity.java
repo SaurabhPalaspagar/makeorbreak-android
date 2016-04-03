@@ -3,6 +3,9 @@ package com.example.saurabh.makeorbreak;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
+import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -39,11 +42,17 @@ public class Main3Activity extends AppCompatActivity {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
-            BitmapDrawable ob = new BitmapDrawable(getResources(), imageBitmap);
+            Bitmap scaledMap = getScaledBitmap(imageBitmap, 345, 380);
+            BitmapDrawable ob = new BitmapDrawable(getResources(), scaledMap);
             image.setImageDrawable(ob);
         }
     }
-
+    public static Bitmap getScaledBitmap(Bitmap b, int reqWidth, int reqHeight)
+    {
+        Matrix m = new Matrix();
+        m.setRectToRect(new RectF(0, 0, b.getWidth(), b.getHeight()), new RectF(0, 0, reqWidth, reqHeight), Matrix.ScaleToFit.CENTER);
+        return Bitmap.createBitmap(b, 0, 0, b.getWidth(), b.getHeight(), m, true);
+    }
     public void submitClaim(View v){
         //send data to our API
 

@@ -16,10 +16,19 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/problem"
+        android:id="@+id/claim"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="40dp"
+        android:textSize="20sp"
+        android:text="What Did You Break?" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/problem"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/claim"
+        android:layout_marginBottom="30dp"
         android:text="Enter your problem" />
 
     <ImageView
