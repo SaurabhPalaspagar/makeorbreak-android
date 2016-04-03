@@ -14,16 +14,18 @@ import android.view.View.OnClickListener;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText userName;
+    EditText userName, first, last;
     EditText phoneNumber;
     Button loginButton;
-    String resp;
+    String resp = "";
     String userToken;
 
     //Login user
     public void logInUser(){
 
-        userName=(EditText) findViewById(R.id.username);
+        userName=(EditText)findViewById(R.id.username);
+        first=(EditText)findViewById(R.id.firstname);
+        last=(EditText)findViewById(R.id.lastname);
         phoneNumber=(EditText) findViewById(R.id.phonenumber);
         loginButton =(Button)findViewById(R.id.loginButton);
 
@@ -46,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
             //Open new activity
             Intent i = new Intent(MainActivity.this, Main2Activity.class);
-            i.putExtra("Response", userToken);
+            i.putExtra("Response", resp);
             startActivity(i);
         } else {
             //make first time user log in
@@ -81,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(v.getId() == R.id.loginButton) // just to ensure
         {
+            resp = first.getText().toString();
             Intent i= new Intent(MainActivity.this, Main2Activity.class);
             i.putExtra("Response", resp);
             startActivity(i);
