@@ -45,7 +45,7 @@ public class Main2Activity extends AppCompatActivity {
         }
 
         momentoftruth = (TextView) findViewById(R.id.data);
-        momentoftruth.setText(token + "\n\n" + userapidata);
+        momentoftruth.setText(userapidata + "\n\n" + token);
 
     }
 
