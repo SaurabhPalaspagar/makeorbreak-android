@@ -29,8 +29,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="top|end"
         android:layout_margin="@dimen/fab_margin"
-        android:tint="@android:color/white"
-        android:src="@android:drawable/ic_menu_camera" />
+        android:tint="@android:color/black"
+        app:backgroundTint="#ffff00"
+        android:src="@android:drawable/ic_menu_camera"
+        android:onClick="openCam"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/submit"
@@ -38,7 +40,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:tint="@android:color/white"
-        android:src="@android:drawable/ic_menu_send" />
+        android:tint="@android:color/black"
+        app:backgroundTint="#ffff00"
+        android:src="@android:drawable/ic_menu_send"
+        android:onClick="submitClaim"/>
+
 
 </android.support.design.widget.CoordinatorLayout>

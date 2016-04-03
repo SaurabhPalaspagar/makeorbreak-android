@@ -13,4 +13,21 @@
     tools:showIn="@layout/activity_main3"
     android:background="#ffffff">
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/problem"
+        android:inputType="phone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="40dp"
+        android:text="Enter your problem" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/photo"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/problem"
+        android:src="@drawable/image_gallery_icon"/>
+
 </RelativeLayout>

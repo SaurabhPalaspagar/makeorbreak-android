@@ -29,7 +29,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:tint="@android:color/white"
+        android:tint="@android:color/black"
+        app:backgroundTint="#ffff00"
         android:src="@android:drawable/ic_input_add"
         android:onClick="addClaim"/>
 
