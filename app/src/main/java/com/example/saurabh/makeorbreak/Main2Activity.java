@@ -1,5 +1,6 @@
 package com.example.saurabh.makeorbreak;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,7 +11,8 @@ import android.widget.TextView;
 
 public class Main2Activity extends AppCompatActivity {
 
-    TextView response;
+    TextView momentoftruth;
+    String apidata;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +23,16 @@ public class Main2Activity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            String value = extras.getString("Response");
+            apidata = extras.getString("Response");
         }
 
-        response = (TextView)findViewById(R.id.data);
+        momentoftruth = (TextView)findViewById(R.id.data);
+        momentoftruth.setText("Response is: " + apidata);
+    }
+
+    public void addClaim(View v) {
+        Intent i= new Intent(Main2Activity.this, Main3Activity.class);
+        startActivity(i);
     }
 
 }

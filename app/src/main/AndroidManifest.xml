@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.example.saurabh.makeorbreak.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -21,8 +21,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.saurabh.makeorbreak.Main2Activity"
+            android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Main3Activity"
+            android:label="@string/title_activity_main3"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

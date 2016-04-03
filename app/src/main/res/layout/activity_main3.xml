@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.saurabh.makeorbreak.Main2Activity">
+    tools:context="com.example.saurabh.makeorbreak.Main3Activity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -21,16 +21,24 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main2" />
+    <include layout="@layout/content_main3" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/add_claim"
+        android:id="@+id/camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:tint="@android:color/white"
+        android:src="@android:drawable/ic_menu_camera" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         android:tint="@android:color/white"
-        android:src="@android:drawable/ic_input_add"
-        android:onClick="addClaim"/>
+        android:src="@android:drawable/ic_menu_send" />
 
 </android.support.design.widget.CoordinatorLayout>
