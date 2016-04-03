@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -17,15 +22,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
-        android:layout_alignParentTop="true"
+        android:layout_marginTop="35dp"
         android:layout_centerHorizontal="true"
         android:src="@drawable/moblogo" />
-
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/firstname"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="First Name" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lastname"
+        android:layout_below="@+id/firstname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Last Name" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/username"
-        android:layout_below="@+id/imageView"
+        android:layout_below="@+id/lastname"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:text="Username" />
@@ -37,17 +57,27 @@
         android:layout_below="@+id/username"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="Phonenumber" />
+        android:text="Phone Number" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radius"
+        android:inputType="phone"
+        android:layout_below="@+id/phonenumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Community Radius" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log In"
         android:id="@+id/loginButton"
-        android:layout_below="@+id/phonenumber"
+        android:layout_below="@+id/radius"
         android:layout_centerHorizontal="true"
         android:background="#080000"
         android:layout_marginTop="10dp"
         android:textColor="#fbf704"
         android:onClick="logIn" />
 </RelativeLayout>
+</ScrollView>
