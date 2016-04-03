@@ -14,18 +14,29 @@ import android.widget.Button;
 import android.content.Intent;
 import android.view.View.OnClickListener;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.Volley;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+
+
 public class MainActivity extends AppCompatActivity {
 
     EditText userName;
     EditText phoneNumber;
     Button loginButton;
+    String resp;
 
     //Login user
-    public void logInUser(View view){
+    public void logInUser(){
 
         userName=(EditText) findViewById(R.id.username);
         phoneNumber=(EditText) findViewById(R.id.phonenumber);
         loginButton =(Button)findViewById(R.id.loginButton);
+
 
 
     }
@@ -37,6 +48,22 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        int hasID = 1;
+        if (hasID == 1) {
+            Intent i= new Intent(MainActivity.this, Main2Activity.class);
+            i.putExtra("Response", resp);
+            startActivity(i);
+        }
+        else {
+            logInUser();
+        }
+
+
+
+    }
+
+    public String getUrl(String name, String email) {
+        return "http://52.36.159.253/api/v0.1/user/login?" + "name=" + name + "&email=" + email;
     }
 
     @Override
@@ -64,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
         if(v.getId() == R.id.loginButton) // just for instance
         {
             Intent i= new Intent(MainActivity.this, Main2Activity.class);
+            i.putExtra("Response", resp);
             startActivity(i);
         }
 

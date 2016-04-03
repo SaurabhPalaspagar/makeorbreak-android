@@ -6,8 +6,11 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 public class Main2Activity extends AppCompatActivity {
+
+    TextView response;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,14 +19,12 @@ public class Main2Activity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            String value = extras.getString("Response");
+        }
+
+        response = (TextView)findViewById(R.id.data);
     }
 
 }
