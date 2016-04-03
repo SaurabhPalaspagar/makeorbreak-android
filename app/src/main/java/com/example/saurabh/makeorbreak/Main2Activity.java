@@ -30,7 +30,7 @@ public class Main2Activity extends AppCompatActivity {
 
     TextView momentoftruth;
     String userapidata;
-    String token = "No requests!";
+    String token = "Jeff \t\tBroken Toilet!\t\t$50\n\nSarah\t\tBroken Phone Buttons\t\t$25";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,7 @@ public class Main2Activity extends AppCompatActivity {
         if (extras != null) {
             userapidata = extras.getString("Response");
         }
-        
+
         momentoftruth = (TextView) findViewById(R.id.data);
         momentoftruth.setText(token);
 
