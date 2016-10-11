@@ -23,23 +23,6 @@ Challenges we ran into
     converting between base64 and urls for Clarifai and Amazon S3
     building a native Android app for the first time
 
-#Accomplishments that we're proud of
-
-    Building an end-to-end functional product
-    Successfully integrating a bunch of APIs
-
-#What we learned
-
-    How to write Android apps
-    How to work with the CapitalOne API
-    How to work with the Clarifai API
-
-#What's next for Make or Break
-
-    Actual authentication
-    "similar" tags as opposed to identical matching (more NLP)
-    Maker ratings
-
 #Built With
 
     ios
@@ -55,3 +38,8 @@ Challenges we ran into
     sqlalchemy
     amazon-web-services
 
+#Links
+
+https://github.com/jayrav13/makeorbreak-ios
+
+https://github.com/neil1023/makeorbreak-backend
